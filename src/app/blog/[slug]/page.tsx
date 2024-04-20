@@ -27,12 +27,15 @@ export async function generateMetadata({
   }
 }
 
-export default function BlogPage({ params }: BlogPageProps) {
+export default async function BlogPage({ params }: BlogPageProps) {
+  const { metadata } = await getBlogPostMetadata(params.slug);
+  const title = `${metadata.title ?? ""}`;
+
   const BlogMarkdown = dynamic(() => import("@/blog/" + params.slug + ".mdx"));
 
   return (
     <div className="container mx-auto p-4">
-      <h2 className="text-xl">{params.slug}</h2>
+      <h2 className="my-4 text-center text-xl font-bold">{title}</h2>
       <BlogMarkdown />
     </div>
   );
