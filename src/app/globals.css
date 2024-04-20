@@ -74,6 +74,10 @@
     color: rgb(var(--foreground-rgb));
     background: rgb(var(--background-rgb));
   }
+
+  a[href] {
+    text-decoration-style: wavy;
+  }
 }
 
 @layer utilities {
