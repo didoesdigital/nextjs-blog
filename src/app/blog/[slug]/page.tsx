@@ -1,4 +1,6 @@
 import dynamic from "next/dynamic";
+import { getBlogPostMetadata } from "@/app/blog/_lib/getBlogPostData";
+import type { Metadata } from "next/types";
 
 type BlogPageProps = {
   params: { slug: string };
@@ -11,6 +13,18 @@ export async function generateStaticParams() {
   }));
 
   return blogStaticParams;
+}
+
+export async function generateMetadata({
+  params,
+}: BlogPageProps): Promise<Metadata> {
+  const { metadata } = await getBlogPostMetadata(params.slug);
+
+  if (metadata) {
+    return metadata;
+  } else {
+    throw new Error(`No metadata found for blog post: ${params.slug}`);
+  }
 }
 
 export default function BlogPage({ params }: BlogPageProps) {
