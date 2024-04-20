@@ -1,0 +1,7 @@
+# Prettier ignores .gitignore ignore list by default
+
+# Static assets
+public/
+
+# Dependencies
+package-lock.json
