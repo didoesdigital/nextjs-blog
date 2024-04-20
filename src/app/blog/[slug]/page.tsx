@@ -35,7 +35,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
   return (
     <div className="container mx-auto p-4">
-      <h2 className="my-4 text-center text-xl font-bold text-teal-800">{title}</h2>
+      <h1 className="my-4 text-center text-xl font-bold text-teal-800">{title}</h1>
       <BlogMarkdown />
     </div>
   );
