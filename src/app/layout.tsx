@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${crimson.variable} ${workSans.variable} ${overpassMono.variable} font-serif`}
+      className={`${crimson.variable} ${workSans.variable} ${overpassMono.variable} font-serif text-neutral-800`}
     >
       <body>{children}</body>
     </html>

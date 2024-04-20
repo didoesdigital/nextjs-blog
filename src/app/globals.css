@@ -2,20 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-  }
-}
+    --color-blue-50: #f0f9ff;
+    --color-blue-100: #e1f3fd;
+    --color-blue-200: #bbe8fc;
+    --color-blue-300: #80d6f9;
+    --color-blue-400: #3cc1f4;
+    --color-blue-500: #13a9e4;
+    --color-blue-600: #0689c3;
+    --color-blue-700: #066d9e;
+    --color-blue-800: #0a5c82;
+    --color-blue-900: #0e4c6c;
+    --color-blue-950: #0b3954;
+    --color-teal-50: #eefffc;
+    --color-teal-100: #c5fffa;
+    --color-teal-200: #8bfff5;
+    --color-teal-300: #4afef0;
+    --color-teal-400: #15ece2;
+    --color-teal-500: #00d0c9;
+    --color-teal-600: #00a8a5;
+    --color-teal-700: #008080;
+    --color-teal-800: #066769;
+    --color-teal-900: #0a5757;
+    --color-teal-950: #003235;
+    --color-neutral-50: #f6f6f6;
+    --color-neutral-100: #e7e7e7;
+    --color-neutral-200: #d1d1d1;
+    --color-neutral-300: #b0b0b0;
+    --color-neutral-400: #888888;
+    --color-neutral-500: #737373;
+    --color-neutral-600: #5d5d5d;
+    --color-neutral-700: #4f4f4f;
+    --color-neutral-800: #454545;
+    --color-neutral-900: #3d3d3d;
+    --color-neutral-950: #262626;
+    --color-crimson-50: #fef2f3;
+    --color-crimson-100: #fee2e3;
+    --color-crimson-200: #fecacc;
+    --color-crimson-300: #fda4a8;
+    --color-crimson-400: #f97076;
+    --color-crimson-500: #f0434b;
+    --color-crimson-600: #dd252e;
+    --color-crimson-700: #c81d25;
+    --color-crimson-800: #9a1a20;
+    --color-crimson-900: #801c21;
+    --color-crimson-950: #450a0d;
+    --color-salmon-50: #fff1f1;
+    --color-salmon-100: #ffe1e2;
+    --color-salmon-200: #ffc7c9;
+    --color-salmon-300: #ffa0a3;
+    --color-salmon-400: #ff5a5f;
+    --color-salmon-500: #f83b41;
+    --color-salmon-600: #e51d23;
+    --color-salmon-700: #c11419;
+    --color-salmon-800: #a01418;
+    --color-salmon-900: #84181b;
+    --color-salmon-950: #480709;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+    --foreground-rgb: 0, 0, 0;
+    --background-rgb: 255, 255, 255;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-rgb: 255, 255, 255;
+    }
+  }
+
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: rgb(var(--background-rgb));
+  }
 }
 
 @layer utilities {
