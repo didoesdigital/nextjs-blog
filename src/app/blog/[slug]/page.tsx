@@ -2,15 +2,16 @@ import dynamic from "next/dynamic";
 import { getBlogPostMetadata } from "@/app/blog/_lib/getBlogPostData";
 import markdownStyles from "@/app/blog/_components/markdown/markdown.module.css";
 import type { Metadata } from "next/types";
+import { getAllBlogPostsData } from "@/app/blog/_lib/getAllBlogPostsData";
 
 type BlogPageProps = {
   params: { slug: string };
 };
 
 export async function generateStaticParams() {
-  const blogPosts = ["first-mdx-post"];
+  const blogPosts = await getAllBlogPostsData();
   const blogStaticParams = blogPosts.map((post) => ({
-    slug: post,
+    slug: post.slug,
   }));
 
   return blogStaticParams;
