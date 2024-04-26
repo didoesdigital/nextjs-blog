@@ -31,3 +31,9 @@
 .hljs-selector-pseudo {
   color: var(--color-teal-400, #15ece2);
 }
+
+.hljs-title,
+.hljs-section {
+  color: var(--color-blue-300, #80d6f9);
+  font-weight: 600;
+}
