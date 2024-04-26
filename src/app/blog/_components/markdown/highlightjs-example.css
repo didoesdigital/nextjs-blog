@@ -1,0 +1,33 @@
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+.hljs,
+.hljs-subst {
+  color: #fff;
+}
+
+.hljs-comment {
+  color: var(--color-neutral-700, #4f4f4f);
+}
+
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  color: var(--color-blue-400, #3cc1f4);
+}
+
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  color: var(--color-teal-400, #15ece2);
+}
