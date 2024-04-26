@@ -12,7 +12,7 @@ const nextConfig = {
 
 const withMDX = createMDX({
   options: {
-    rehypePlugins: [rehypeHighlight],
+    rehypePlugins: [[rehypeHighlight, { aliases: { markdown: "mdx" } }]],
   },
 });
 
