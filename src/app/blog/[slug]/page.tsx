@@ -37,7 +37,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
   return (
     <div
-      className={`prose lg:prose-xl container mx-auto p-4 ${markdownStyles["markdown"]}`}
+      className={`container prose mx-auto p-4 lg:prose-xl ${markdownStyles["markdown"]}`}
     >
       <h1 className="my-4 text-center text-teal-800">{title}</h1>
       <BlogMarkdown />
