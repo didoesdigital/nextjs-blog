@@ -3,6 +3,7 @@ import { getBlogPostMetadata } from "@/app/blog/_lib/getBlogPostData";
 import markdownStyles from "@/app/blog/_components/markdown/markdown.module.css";
 import type { Metadata } from "next/types";
 import { getAllBlogPostsData } from "@/app/blog/_lib/getAllBlogPostsData";
+import 'highlight.js/styles/stackoverflow-dark.css';
 
 type BlogPageProps = {
   params: { slug: string };
