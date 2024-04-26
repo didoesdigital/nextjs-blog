@@ -119,6 +119,28 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      typography: () => ({
+        DEFAULT: {
+          css: {
+            pre: {
+              paddingTop: 0,
+              paddingInlineEnd: 0,
+              paddingBottom: 0,
+              paddingInlineStart: 0,
+            },
+          },
+        },
+        xl: {
+          css: {
+            pre: {
+              paddingTop: 0,
+              paddingInlineEnd: 0,
+              paddingBottom: 0,
+              paddingInlineStart: 0,
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [require("@tailwindcss/typography")],
