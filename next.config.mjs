@@ -16,7 +16,15 @@ const withMDX = createMDX({
   options: {
     rehypePlugins: [
       rehypeSlug,
-      rehypeAutolinkHeadings,
+      [
+        rehypeAutolinkHeadings,
+        {
+          behavior: "wrap",
+          properties: {
+            className: "linked-heading",
+          },
+        },
+      ],
       [rehypeHighlight, { aliases: { markdown: "mdx" } }],
     ],
   },
