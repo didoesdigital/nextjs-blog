@@ -122,6 +122,10 @@ const config: Config = {
       typography: () => ({
         DEFAULT: {
           css: {
+            ":is(h1, h2, h3, h4, h5) a": {
+              "font-weight": "inherit",
+              "text-decoration": "inherit",
+            },
             pre: {
               paddingTop: 0,
               paddingInlineEnd: 0,
@@ -132,6 +136,10 @@ const config: Config = {
         },
         xl: {
           css: {
+            ":is(h1, h2, h3, h4, h5) a": {
+              "font-weight": "inherit",
+              "text-decoration": "inherit",
+            },
             pre: {
               paddingTop: 0,
               paddingInlineEnd: 0,
