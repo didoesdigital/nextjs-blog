@@ -1,3 +1,10 @@
 .markdown > h2 + p::first-line {
   @apply text-lg leading-snug tracking-widest;
 }
+
+.markdown :is(h1, h2, h3, h4, h5) a:is(:hover, :focus, :active)::before,
+.markdown :is(h1, h2, h3, h4, h5):is(:target, :focus) a::before {
+  content: "#";
+  position: absolute;
+  transform: translate(-1ch, -0.1rem);
+}
