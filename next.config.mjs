@@ -1,5 +1,6 @@
 import createMDX from "@next/mdx";
 import rehypeHighlight from "rehype-highlight";
+import rehypeSlug from "rehype-slug";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -12,7 +13,10 @@ const nextConfig = {
 
 const withMDX = createMDX({
   options: {
-    rehypePlugins: [[rehypeHighlight, { aliases: { markdown: "mdx" } }]],
+    rehypePlugins: [
+      rehypeSlug,
+      [rehypeHighlight, { aliases: { markdown: "mdx" } }],
+    ],
   },
 });
 
