@@ -8,7 +8,7 @@ export type PostMetadata = Metadata & {
 
 export type BlogPostData = {
   slug: string;
-  metadata: Metadata;
+  metadata: PostMetadata;
 };
 
 export async function getBlogPostMetadata(slug: string): Promise<BlogPostData> {
