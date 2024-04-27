@@ -1,19 +1,30 @@
+import { Feed } from "feed";
+import { getAllBlogPostsData } from "@/app/blog/_lib/getAllBlogPostsData";
+
+const feed = new Feed({
+  title: "My Blog RSS Feed",
+  description: "This is my personal feed!",
+  id: "https://example.com/blog",
+  link: "https://example.com/blog/index.xml",
+  language: "en", // optional, used only in RSS 2.0, possible values: https://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
+  copyright: "All rights reserved 2024, My Name",
+});
+
 export async function GET() {
-  return new Response(
-    `<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
- 
-<channel>
-  <title>Next.js Documentation</title>
-  <link>https://nextjs.org/docs</link>
-  <description>The React Framework for the Web</description>
-</channel>
- 
-</rss>`,
-    {
-      headers: {
-        'Content-Type': 'text/xml',
-      },
-    }
-  )
+  const posts = await getAllBlogPostsData();
+
+  posts.forEach((post) => {
+    feed.addItem({
+      title: `${post.metadata.title ?? ""}`,
+      link: `https://example.com/blog/${post.slug}`,
+      description: `${post.metadata.description ?? ""}`,
+      date: new Date(), // TODO: set this to the post's publish date
+    });
+  });
+
+  return new Response(feed.rss2(), {
+    headers: {
+      "Content-Type": "application/rss+xml",
+    },
+  });
 }
