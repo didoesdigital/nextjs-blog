@@ -1,4 +1,5 @@
 import createMDX from "@next/mdx";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
 
@@ -15,6 +16,7 @@ const withMDX = createMDX({
   options: {
     rehypePlugins: [
       rehypeSlug,
+      rehypeAutolinkHeadings,
       [rehypeHighlight, { aliases: { markdown: "mdx" } }],
     ],
   },
