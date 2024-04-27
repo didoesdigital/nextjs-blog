@@ -18,6 +18,12 @@ export async function getAllBlogPostsData(): Promise<BlogPostData[]> {
       }),
     );
 
+    result.sort(
+      (a, b) =>
+        +new Date(b.customMetadata.publishDate) -
+        +new Date(a.customMetadata.publishDate),
+    );
+
     return result;
   } catch (error) {
     console.error(error);

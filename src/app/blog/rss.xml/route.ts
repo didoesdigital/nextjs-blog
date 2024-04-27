@@ -18,7 +18,7 @@ export async function GET() {
       title: `${post.metadata.title ?? ""}`,
       link: `https://example.com/blog/${post.slug}`,
       description: `${post.metadata.description ?? ""}`,
-      date: new Date(), // TODO: set this to the post's publish date
+      date: new Date(post.customMetadata.publishDate),
     });
   });
 
