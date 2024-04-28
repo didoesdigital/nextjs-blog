@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${crimson.variable} ${workSans.variable} ${overpassMono.variable} font-serif text-neutral-800`}
+      className={`${crimson.variable} ${workSans.variable} ${overpassMono.variable} bg-white font-serif text-neutral-800 dark:bg-neutral-950`}
     >
       <head>
         {/* <link
