@@ -1,4 +1,5 @@
 import Link from "next/link";
+// import { GoogleAnalytics } from "@next/third-parties/google";
 import { crimson, workSans, overpassMono } from "@/app/_components/fonts/fonts";
 import type { Metadata } from "next";
 import type { Viewport } from "next";
@@ -85,6 +86,7 @@ export default function RootLayout({
         </header>
         {children}
       </body>
+      {/* <GoogleAnalytics gaId={"G-TODO"} /> */}
     </html>
   );
 }
