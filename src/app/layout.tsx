@@ -26,6 +26,37 @@ export default function RootLayout({
       lang="en"
       className={`${crimson.variable} ${workSans.variable} ${overpassMono.variable} font-serif text-neutral-800`}
     >
+      <head>
+        {/* <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <link
+          rel="mask-icon"
+          href="/favicon/safari-pinned-tab.svg"
+          color="#008080"
+        /> */}
+        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        {/* <meta name="msapplication-TileColor" content="#000000" />
+        <meta
+          name="msapplication-config"
+          content="/favicon/browserconfig.xml"
+        /> */}
+      </head>
       <body>
         <header>
           <nav className="container mx-auto mt-12 flex max-w-screen-lg flex-wrap justify-between gap-y-2 px-5">
