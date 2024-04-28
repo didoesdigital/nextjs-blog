@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { crimson, workSans, overpassMono } from "@/app/_components/fonts/fonts";
 import type { Metadata } from "next";
+import type { Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,6 +15,14 @@ export const metadata: Metadata = {
     locale: "en",
     type: "website",
   },
+};
+
+export const viewport: Viewport = {
+  colorScheme: "light dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#c5fffa" },
+    { media: "(prefers-color-scheme: dark)", color: "#003235" },
+  ],
 };
 
 export default function RootLayout({
