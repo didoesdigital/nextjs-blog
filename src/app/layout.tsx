@@ -12,6 +12,16 @@ export const metadata: Metadata = {
   },
   description: "My site is about…",
   authors: [{ name: "My name" }],
+  alternates: {
+    types: {
+      "application/rss+xml": [
+        {
+          title: "My Blog RSS Feed",
+          url: "https://example.com/blog/index.xml",
+        },
+      ],
+    },
+  },
   openGraph: {
     locale: "en",
     type: "website",
