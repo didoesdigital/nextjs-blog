@@ -26,7 +26,9 @@ export async function getBlogPostMetadata(slug: string): Promise<BlogPostData> {
       }
 
       if (!file.customMetadata.publishDate) {
-        throw new Error(`Missing required custom metadata field, publishDate, in: ${slug}`);
+        throw new Error(
+          `Missing required custom metadata field, publishDate, in: ${slug}`,
+        );
       }
 
       return {
