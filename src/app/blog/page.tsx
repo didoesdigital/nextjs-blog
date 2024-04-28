@@ -6,7 +6,7 @@ export default async function Blogs() {
 
   if (blogs.length === 0) {
     return (
-      <div className="prose prose-xl container mx-auto px-4">
+      <div className="container prose prose-xl mx-auto px-4 dark:prose-invert">
         <h1 className="my-4 text-center text-teal-800">Blog</h1>
         <p>There are no posts yet…</p>
       </div>
@@ -14,7 +14,7 @@ export default async function Blogs() {
   }
 
   return (
-    <div className="prose prose-xl container mx-auto px-4">
+    <div className="container prose prose-xl mx-auto px-4 dark:prose-invert">
       <h1 className="my-4 text-center text-teal-800">Blog</h1>
       <p>Here are some recent posts.</p>
       <ul>

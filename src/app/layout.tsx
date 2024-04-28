@@ -60,12 +60,12 @@ export default function RootLayout({
       <body>
         <header>
           <nav className="container mx-auto mt-12 flex max-w-screen-lg flex-wrap justify-between gap-y-2 px-5">
-            <div className="prose prose-xl">
+            <div className="prose prose-xl dark:prose-invert">
               <Link href="/" className="text-2xl font-semibold tracking-wide">
                 My site name
               </Link>
             </div>
-            <div className="prose prose-xl flex flex-wrap gap-x-4 gap-y-0">
+            <div className="prose prose-xl flex flex-wrap gap-x-4 gap-y-0 dark:prose-invert">
               <p>
                 <Link className="font-sans tracking-wide" href="/blog">
                   Blog

@@ -59,20 +59,6 @@
     --color-salmon-800: #a01418;
     --color-salmon-900: #84181b;
     --color-salmon-950: #480709;
-
-    --foreground-rgb: 0, 0, 0;
-    --background-rgb: 255, 255, 255;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --foreground-rgb: 255, 255, 255;
-    }
-  }
-
-  body {
-    color: rgb(var(--foreground-rgb));
-    background: rgb(var(--background-rgb));
   }
 
   a[href] {
