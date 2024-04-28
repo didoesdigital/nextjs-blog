@@ -8,8 +8,7 @@ export const metadata: Metadata = {
     template: `%s | My site name`,
     default: "My site name",
   },
-  description:
-    "My site is about…",
+  description: "My site is about…",
   authors: [{ name: "My name" }],
   openGraph: {
     locale: "en",
