@@ -6,6 +6,7 @@ import rehypeSlug from "rehype-slug";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
+  // output: process.env.NODE_ENV === "production" ? "export" : undefined,
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   images: {
     unoptimized: true,
