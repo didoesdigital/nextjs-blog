@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import type { PluginAPI } from "tailwindcss/types/config";
 
 const config: Config = {
   content: [
@@ -119,9 +120,41 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      typography: () => ({
+      typography: ({ theme }: PluginAPI) => ({
         DEFAULT: {
           css: {
+            // '--tw-prose-body': theme('colors.teal[800]'),
+            "--tw-prose-headings": theme("colors.teal[800]"),
+            // '--tw-prose-lead': theme('colors.teal[700]'),
+            // '--tw-prose-links': theme('colors.teal[900]'),
+            // '--tw-prose-bold': theme('colors.teal[900]'),
+            // '--tw-prose-counters': theme('colors.teal[600]'),
+            // '--tw-prose-bullets': theme('colors.teal[400]'),
+            // '--tw-prose-hr': theme('colors.teal[300]'),
+            // '--tw-prose-quotes': theme('colors.teal[900]'),
+            // '--tw-prose-quote-borders': theme('colors.teal[300]'),
+            // '--tw-prose-captions': theme('colors.teal[700]'),
+            // '--tw-prose-code': theme('colors.teal[900]'),
+            // '--tw-prose-pre-code': theme('colors.teal[100]'),
+            // '--tw-prose-pre-bg': theme('colors.teal[900]'),
+            // '--tw-prose-th-borders': theme('colors.teal[300]'),
+            // '--tw-prose-td-borders': theme('colors.teal[200]'),
+            // '--tw-prose-invert-body': theme('colors.teal[200]'),
+            "--tw-prose-invert-headings": theme("colors.teal[200]"),
+            // '--tw-prose-invert-lead': theme('colors.teal[300]'),
+            // '--tw-prose-invert-links': theme('colors.white'),
+            // '--tw-prose-invert-bold': theme('colors.white'),
+            // '--tw-prose-invert-counters': theme('colors.teal[400]'),
+            // '--tw-prose-invert-bullets': theme('colors.teal[600]'),
+            // '--tw-prose-invert-hr': theme('colors.teal[700]'),
+            // '--tw-prose-invert-quotes': theme('colors.teal[100]'),
+            // '--tw-prose-invert-quote-borders': theme('colors.teal[700]'),
+            // '--tw-prose-invert-captions': theme('colors.teal[400]'),
+            // '--tw-prose-invert-code': theme('colors.white'),
+            // '--tw-prose-invert-pre-code': theme('colors.teal[300]'),
+            // '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
+            // '--tw-prose-invert-th-borders': theme('colors.teal[600]'),
+            // '--tw-prose-invert-td-borders': theme('colors.teal[700]'),
             ":is(h1, h2, h3, h4, h5) a": {
               "font-weight": "inherit",
               "text-decoration": "inherit",
