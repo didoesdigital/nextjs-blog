@@ -22,7 +22,16 @@ export const metadata: Metadata = {
       ],
     },
   },
+  metadataBase: new URL("https://example.com"),
   openGraph: {
+    images: [
+      {
+        url: "/assets/images/site-open-graph.png", // Must be an absolute URL or use metadataBase with a relative URL
+        width: 1576,
+        height: 888,
+        alt: "A personal blog",
+      },
+    ],
     locale: "en",
     type: "website",
   },
