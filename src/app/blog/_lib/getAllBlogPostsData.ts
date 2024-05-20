@@ -1,6 +1,13 @@
 import { readdir } from "fs/promises";
 import { getBlogPostMetadata } from "@/app/blog/_lib/getBlogPostData";
 import type { BlogPostData } from "@/app/blog/_lib/getBlogPostData";
+import type { Dirent } from "fs";
+
+const isMDXFile = (dirent: Dirent) =>
+  !dirent.isDirectory() && dirent.name.endsWith(".mdx");
+
+const getSlugFromFilename = (dirent: Dirent) =>
+  dirent.name.substring(0, dirent.name.lastIndexOf("."));
 
 export async function getAllBlogPostsData(): Promise<BlogPostData[]> {
   try {
@@ -8,9 +15,7 @@ export async function getAllBlogPostsData(): Promise<BlogPostData[]> {
       withFileTypes: true,
     });
 
-    const slugs = dirents
-      .filter((dirent) => !dirent.isDirectory() && dirent.name.endsWith(".mdx"))
-      .map((dirent) => dirent.name.substring(0, dirent.name.lastIndexOf(".")));
+    const slugs = dirents.filter(isMDXFile).map(getSlugFromFilename);
 
     const result = await Promise.all(
       slugs.map((slug) => {
