@@ -3,26 +3,34 @@ import Link from "next/link";
 import { crimson, workSans, overpassMono } from "@/app/_components/fonts/fonts";
 import type { Metadata } from "next";
 import type { Viewport } from "next";
+import {
+  AUTHOR_NAME,
+  BLOG_RSS_FEED_LINK,
+  BLOG_RSS_FEED_TITLE,
+  ORIGIN,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+} from "@/app/lib/constants/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    template: `%s | My site name`,
-    default: "My site name",
+    template: `%s | ${SITE_NAME}`,
+    default: SITE_NAME,
   },
-  description: "My site is about…",
-  authors: [{ name: "My name" }],
+  description: SITE_DESCRIPTION,
+  authors: [{ name: AUTHOR_NAME }],
   alternates: {
     types: {
       "application/rss+xml": [
         {
-          title: "My Blog RSS Feed",
-          url: "https://example.com/blog/index.xml",
+          title: BLOG_RSS_FEED_TITLE,
+          url: BLOG_RSS_FEED_LINK,
         },
       ],
     },
   },
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL(ORIGIN),
   openGraph: {
     images: [
       {
@@ -91,7 +99,7 @@ export default function RootLayout({
           <nav className="container mx-auto mt-12 flex max-w-screen-lg flex-wrap justify-between gap-y-2 px-5">
             <div className="prose prose-xl dark:prose-invert">
               <Link href="/" className="text-2xl font-semibold tracking-wide">
-                My site name
+                {SITE_NAME}
               </Link>
             </div>
             <div className="prose prose-xl flex flex-wrap gap-x-4 gap-y-0 dark:prose-invert">

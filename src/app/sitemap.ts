@@ -1,10 +1,11 @@
-import { MetadataRoute } from "next";
 import { getAllBlogPostsData } from "@/app/blog/_lib/getAllBlogPostsData";
+import { ORIGIN } from "@/app/lib/constants/site";
+import { MetadataRoute } from "next";
 
 export async function getBlogsSitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getAllBlogPostsData();
   const blogPostEntries: MetadataRoute.Sitemap = posts.map((post) => ({
-    url: `https://example.com/blog/${post.slug}/index.html`,
+    url: `${ORIGIN}/blog/${post.slug}/index.html`,
     lastModified: post.customMetadata.publishDate,
     changeFrequency: "yearly",
     priority: 0.9,
@@ -13,7 +14,7 @@ export async function getBlogsSitemap(): Promise<MetadataRoute.Sitemap> {
   const newestBlogDate = posts[0].customMetadata.publishDate;
 
   const blogIndexEntry: MetadataRoute.Sitemap[0] = {
-    url: `https://example.com/blog/index.html`,
+    url: `${ORIGIN}/blog/index.html`,
     lastModified: newestBlogDate,
     changeFrequency: "weekly",
     priority: 0.5,
@@ -29,7 +30,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     {
-      url: `https://example.com/index.html`,
+      url: `${ORIGIN}/index.html`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,

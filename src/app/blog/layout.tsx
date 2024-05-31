@@ -1,11 +1,12 @@
+import { BLOG_DESCRIPTION, SITE_NAME } from "@/app/lib/constants/site";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    template: `%s | Blog | My site name`,
+    template: `%s | Blog | ${SITE_NAME}`,
     default: `Blog`,
   },
-  description: "This blog is about…",
+  description: BLOG_DESCRIPTION,
   openGraph: {
     images: [
       {
