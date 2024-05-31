@@ -77,3 +77,7 @@ npm run build && npx serve@latest out
 ### Deployment
 
 You can [deploy a static Next.js site](https://nextjs.org/docs/app/building-your-application/deploying/static-exports#deploying) on a variety of platforms. You could use [Vercel](https://vercel.com/) from the creators of Next.js, [Netlify](https://www.netlify.com/), [Cloudflare pages](https://developers.cloudflare.com/pages/framework-guides/nextjs/deploy-a-static-nextjs-site/), [GitHub Pages](https://pages.github.com/), [AWS S3](https://aws.amazon.com/s3/), [Google Cloud Storage](https://cloud.google.com/storage), [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/), or others.
+
+## License
+
+Licensed under the BSD Zero Clause License. See [LICENSE file](LICENSE.md) in the project root, or <https://opensource.org/licenses/0BSD> for full license information.
