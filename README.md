@@ -1,3 +1,5 @@
+![Demo screenshot of Next.js blog showing My first MDX blog post with a h2 heading, curlew photo, and CSS code block with syntax highlighting](nextjs-blog-template-readme-demo-screenshot.png)
+
 ## Introduction
 
 This is a template for a [Next.js](https://nextjs.org/) static site with a blog. It is bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). The template repo is a companion for the book, <cite>Build a Blog Using Next.js</cite> by [Diana MacDonald](https://didoesdigital.com), coming soon.
