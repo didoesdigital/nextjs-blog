@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a template for a [Next.js](https://nextjs.org/) static site with a blog. It is bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). The template repo is a companion for the book, <cite>Build a Blog Using Next.js</cite> by [Diana MacDonald](https://didoesdigital.com), coming soon.
+This is a template for a [Next.js](https://nextjs.org/) static site with a blog. It is bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). The template repo is a companion for the book, <cite><a href="https://didoesdigital.com/project/nextjs-blog-book/">Build a Blog Using Next.js</a></cite> by [Diana MacDonald](https://didoesdigital.com), available for free online.
 
 ## Features
 
